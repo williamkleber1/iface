@@ -1,3 +1,5 @@
+package sistema;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,8 +17,9 @@ public class Main
 		String senhaLogar = ler.nextLine();
 		Pessoa usuarioLogado = null;
 		for(int i = 0; i < usuarios.size(); i++)
-		{
-			if(usuarios.indexOf(i).senha == senhaLogar)
+		{	
+			//Pessoa aux = usuarios.indexOf(i);
+			if(usuarios.get(i).getEmail().equals(emailLogar) && usuarios.get(i).getSenha().equals(senhaLogar))
 			{
 				System.out.println("---------------------ok---------------");
 			}
@@ -57,13 +60,10 @@ public class Main
 			System.out.println("2 - para criar uma conta\n");
 			int opcao = ler.nextInt();
 			if(opcao == 1) 
-			{
-				criarConta(usuarios.size() , usuarios);
-			}
-			else
-			{
 				logar(usuarios);
-			}
+			else
+				criarConta(usuarios.size() , usuarios);
+			
 			
 		}	
 		
