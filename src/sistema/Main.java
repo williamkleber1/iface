@@ -4,46 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main 
+public class Main extends GerirConta 
 {
 	
 	
-	public static  void logar(ArrayList<Pessoa> usuarios) 
-	{
-		Scanner ler= new Scanner(System.in);
-		System.out.println("digite seu email\n");
-		String emailLogar = ler.nextLine();
-		System.out.println("digite sua senha\n");
-		String senhaLogar = ler.nextLine();
-		Pessoa usuarioLogado = null;
-		for(int i = 0; i < usuarios.size(); i++)
-		{	
-			//Pessoa aux = usuarios.indexOf(i);
-			if(usuarios.get(i).getEmail().equals(emailLogar) && usuarios.get(i).getSenha().equals(senhaLogar))
-			{
-				System.out.println("---------------------ok---------------");
-			}
-		}
-		
-	}
-
-	public static void criarConta(int id,ArrayList<Pessoa> usuarios) 
-	{
-		Scanner ler= new Scanner(System.in);
-		System.out.println("digite seu nome\n");
-		String novoNome = ler.nextLine();
-		System.out.println("digite seu email\n");
-		String novoEmail = ler.nextLine();
-		System.out.println("digite sua senha\n");
-		String novaSenha = ler.nextLine();
-		
-		Pessoa novaPessoa = new Pessoa(id,novoNome,novoEmail,novaSenha);
-		usuarios.add(novaPessoa);
-		System.out.println("seja bem vindo "+ novoNome +", agora vc pode logar na sua conta\n\n\n");
-		
-		
-		
-	}
 	
 	public static void main(String[] args) 
 	{	

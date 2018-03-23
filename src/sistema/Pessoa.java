@@ -10,6 +10,7 @@ public class Pessoa
 	public String senha;
 	ArrayList<Pessoa> amigos = new ArrayList<Pessoa> ();
 	ArrayList<String> menssagens = new ArrayList<String> ();
+	ArrayList<Comunidade> comunidades = new ArrayList<Comunidade> ();
 	
 	public Pessoa(int id,String nome,String email,String senha)
 	{
