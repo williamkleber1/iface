@@ -64,7 +64,10 @@ public class GerirConta
 
 	private static void ver_comunidades(Pessoa usuario) 
 	{
-		// TODO Auto-generated method stub
+		for (int i = 0; i < usuario.comunidades.size(); i++) 
+		{
+			System.out.println(usuario.comunidades.indexOf(i));
+		}
 		
 	}
 

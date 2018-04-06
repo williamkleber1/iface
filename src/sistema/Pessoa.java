@@ -57,9 +57,16 @@ public class Pessoa
 		this.amigos.add(pessoa);
 		pessoa.amigos.add(this);
 	}
-	public void menssagem(String msg, Pessoa pessoa) 
+	public void enviarMenssagem(String msg, Pessoa pessoa) 
 	{
 		pessoa.menssagens.add(msg + "\n recebido de :" + this.nome +"\n" );
+	}
+	public void verMenssagens() 
+	{
+		for (int i = 0; i < this.menssagens.size(); i++)
+		{
+			System.out.println( this.menssagens.indexOf(i)) );
+		}
 	}
 	
 	public void removerAmigo(Pessoa pessoa)

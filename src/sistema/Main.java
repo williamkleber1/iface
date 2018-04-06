@@ -30,9 +30,7 @@ public class Main extends GerirConta
 			
 			
 		}	
-		
-
-		
+	
 	}
 
 }
